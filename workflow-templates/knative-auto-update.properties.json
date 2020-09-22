@@ -1,0 +1,5 @@
+{
+    "name": "Knative auto-update workflows",
+    "description": "Generates pull requests to automate various repo health tasks.",
+    "iconName": "blender"
+}
