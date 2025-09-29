@@ -1,13 +1,13 @@
 issuer: https://accounts.google.com
-# autofix@staging-enforce-cd1e.iam.gserviceaccount.com
+# The unique ID of the service account that staging-autofix runs as
 subject: "118295070799166027529"
 
 permissions:
-  checks: read
+  # Required to push commits with fixes to the fork
   contents: write
-  pull_requests: write
-  statuses: read
-  workflows: write # Allow triggering actions when authoring commits.
+  # Required to fix GitHub Actions workflow files
+  workflows: write
 
+# You can limit the scope of what autofix can access via this list
 repositories:
-  - terraform-infra-common
+  - terraform-cloudrun-glue
